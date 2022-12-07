@@ -17,8 +17,6 @@ Using a MySQL storage we replace the file storage (JSON file) by a Database stor
 
 ---
 
-<center><h3>Repository Contents by Project Task</h3> </center>
-
 
 ## Authors :black_nib:
 

@@ -1,28 +1,29 @@
 #!/usr/bin/python3
-# starts flask with c thing
-from flask import Flask
+"""Starts a Flask web application"""
 
+from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
-    # prints hello
+@app.route('/', strict_slashes=False)
+def hello_holberton():
+    """Returns a string at the root route"""
     return 'Hello HBNB!'
 
 
-@app.route('/hbnb')
+@app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    # prints hbnb
+    """Returns a string at the /hbnb route"""
     return 'HBNB'
 
 
-@app.route('/c/<text>')
-def ctext(text):
-    # prints c with input
-    return 'C ' + text.replace("_", ' ')
+@app.route('/c/<text>', strict_slashes=False)
+def cisfun(text):
+    """Returns a string at the /c/<text> route,
+    expands the <text> variable"""
+    new = text.replace('_', ' ')
+    return 'C %s' % new
 
 
-if __name__ == "__main__":
-    app.url_map.strict_slashes = False
-    app.run(host="0.0.0.0", port=5000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')

@@ -1,56 +1,26 @@
-# Synopsis
-![](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step2.png)
+<center> <h1>AirBnB Clone - The Console</h1> </center>
 
-The Airbnb clone project for which we are creating a copy of the [Airbnb](https://www.airbnb.com/).
-Only some features will be implemented and will be listed below once completed.
+## Project Description
 
+The Airbnb clone is one of the main projects at Holberton School, it's a long term project that we need to accomplish by building up trough a series of small modules or pieces. This project is thinking as a whole for a software developer, to learn and become a full-stack developer, gluing alltogether the infrastructure of the Airbnb from back to front, including databases, static and dynamic content, web frameworks, APIs, and web infrastructure.
+The first step that we need to build is "the console" or the command interpreter, this is meant to be a tool to validate or manipulate the storage system, through the console we are gonna be able of:
 
-## Features
+- Create our data model.
+- Manage (create, update, destroy, etc) objects.
+- Store and persist objects to a file (JSON file)
 
-### Command Interpreter
+This storage engine will give us an abstraction between “My object” and “How they are stored and persisted”.
 
-#### Description
+For the second part of the project we should build the database connection through SQLAlchemy, the ORM of Python.
 
-The Command Interpreter is used to manage the whole application's functionality from the command line, such as:
-+ Crete a new object.
-+ Retrieve an object from a file, database, etc.
-+ Execute operation on objects. e.g. Count, compute statistics, etc.
-+ Update object's attributes.
-+ Destroy an object.
+Using a MySQL storage we replace the file storage (JSON file) by a Database storage and we map your models to a table in database by using an O.R.M.
 
-#### Usage
+---
 
-To launch the console application in interactive mode simply run:
-
-```console.py ```
-
-or to use the non-interactive mode run:
-
-```echo "your-command-goes-here" | ./console.py ```
-
-#### Commands
-
-Commands | Description | Usage
--------- | ----------- |-------- |
-**help** or **?**| Displays the documented commands. | **help**
-**quit**     | Exits the program. | **quit**
-**EOF**      | Ends the program. Used when files are passed into the program. | N/A
-**create**  | Creates a new instance of the \<class_name\>. Creates a Json file with the object representation. and prints the id of created object. | **create** \<class_name\> <param> <param> (Param Syntax: <key name>=<value>)
-**show**    | Prints the string representation of an instance based on the class name and id. | **show** \<class_name class_id\>
-**destroy** | Deletes and instance base on the class name and id. | **destroy** \<class_name class_id\>
-**all** | Prints all string representation of all instances based or not on the class name | **all** or **all** \<class_name class_id\>
-**update** | Updates an instance based on the class name and id by adding or updating attribute | **update** \<class_name class_id key value\>
-
-## Tests
-
-If you wish to run at the test for this application all of the test are located
-under the **test/** folder and can execute all of them by simply running:
-
-```python3 -m unittest discover tests ```
-
-from the root directory.
+<center><h3>Repository Contents by Project Task</h3> </center>
 
 
-## Bugs
+## Authors :black_nib:
 
-+ No known bugs at this time.
+- **Miyanda Hakooma** <[Miyanda](https://github.com/mhakooma)>
+- **Fayçal Ouedraogo** <[Fayçal](https://github.com/fayouedraogo)>
